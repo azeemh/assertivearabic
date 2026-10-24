@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- use lang="ar" to set language to arabic, dir="rtl" to render the text in right to left orientation by default for all html on the page -->
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Assertive Arabic Font Testing Sandbox</title>
+    <style>
+        /* Inject your freshly compiled font binary locally */
+        @font-face {
+            font-family: 'AssertiveArabic';
+            src: url('fullArabic.ttf') format('truetype');
+        }
+
+        body {
+            background-color: #fcfcfc;
+            color: #111111;
+            font-family: sans-serif;
+            padding: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .showcase-box {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            margin-bottom: 2rem;
+            font-size: 3em;
+        }
+
+        /* Target element styling using your new font family */
+        .assertive-text {
+            font-family: 'AssertiveArabic', serif;
+            line-height: 2.2;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Restores natural Left-to-Right flow for English blocks */
+        .english-text {
+            direction: ltr;        /* Forces the text flow from left to right */
+            text-align: left;      /* Anchors the text block to the left margin */
+            font-family: sans-serif; /* Swaps away from the Arabic font to a clean Latin face */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="assertive-text">العربية الحازمة</h1>
+        <label>Assertive Arabic</label>
+        <hr>
+        <br><br>
+
+        <h2 class="assertive-text">خط عربي ذو طابع قوي</h2>
+
+        <p class="assertive-text">
+            إن حذف علامات التشكيل من النصوص العربية المكتوبة يؤدي إلى فقدان معلومات صوتية منطوقة تنقل دلالات دقيقة ونوايا الكاتب، وتزيل أي غموض. كما أن ذلك يجعل اللغة أسهل فهماً، ويساعد الأفراد على إدراك كيف يمكن للجذور المكونة من ثلاثة حروف ساكنة أن تكتسب دلالات ومعاني مختلفة باختلاف علامات التشكيل (الحركات) المصاحبة لها.
+        </p>
+
+        <br><br><br><hr><br><br><br>
+
+        <h2 class="english-text">Assertive Arabic Font</h2>
+        
+        <p class="english-text">Dropping diacritics from typed arabic removes spoken phonetic information that conveys nuance and intentions of the writer, removing ambiguity. It also makes the language easier to understand and help people understand how 3 letter consonant constructs can get different nuances and meanings with different vowel diacritics.</p>
+
+        <br><br><br><hr><br><br><br>
+        
+        <h2 class="english-text">Assertive Text Example</h2>
+        
+        <div class="showcase-box">
+            <p class="assertive-text">
+                اِسْتَهْدَفَ المَقَالُ المَوْضُوعَ بِأَصَالَةٍ وَأَنَاقَةٍ.<br>
+                اُسْتُهْدِفَ المَوْضُوعُ بِتَعْقِيدٍ دُونَ وُضُوحٍ.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
+
