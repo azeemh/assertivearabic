@@ -22,6 +22,7 @@ Thus this font preserves diacritics (Tashkeel), but renders them in the font as 
 * **صيغة المبني للمعلوم:** تناول المقالُ الموضوعَ بأصالةٍ وأناقةٍ.
 * **صيغة المبني للمجهول:** عولج الموضوعُ بطريقةٍ معقدةٍ تفتقر إلى الوضوح.
 
+## إنشاء خطوط بقيمة شفافية مخصصة للعلامات التشكيلية
 تحتوي هذه المكتبة على نص برمجي (script) بلغة "بايثون 3" (Python 3)، يقوم بمعالجة ملف خط عربي كامل وفصل علامات التشكيل عن الحروف الأساسية. وينتج عن ذلك ملف يحمل الاسم `AssertiveArabic.ttf`، تظهر فيه علامات التشكيل (كالفتحة، والكسرة، والضمة، والسكون، وغيرها) بدرجة شفافية أقل (أي أنها تبدو باهتة).
 
 إذا أردت تعديل درجة الشفافية، يمكنك تغيير قيمة `alpha` في السطر 21: **`faded_black = Color(blue=0, green=0, red=0, alpha=35)`**
@@ -47,6 +48,7 @@ python3 buildarabicfont.py NotoNaskhArabic-Regular.ttf AssertiveArabic.ttf
 * **Active Voice:** اِسْتَهْدَفَ المَقَالُ المَوْضُوعَ بِأَصَالَةٍ وَأَنَاقَةٍ.
 * **Passive Voice:** اُسْتُهْدِفَ المَوْضُوعُ بِتَعْقِيدٍ دُونَ وُضُوحٍ.
 
+## Generating Fonts With Your Own Opacity Value for Diacritics
 This library contains a python3 script that takes a complete Arabic language font and separates the diacritics symbols from the glyphs. The resulting AssertiveArabic.ttf file renders diacritics (fatah, kesrah, dummah, sukoon, etc) in a lower opacity transparency.
 
 If you want to change the value of the opacity update the alpha in line 21: **`faded_black = Color(blue=0, green=0, red=0, alpha=35)`**
